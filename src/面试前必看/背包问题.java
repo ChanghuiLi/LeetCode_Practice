@@ -12,6 +12,7 @@ public class 背包问题 {
 			}
 		}
 		return dp[w.length][bag];
+		//help
 		
 		//也可以用一位数组来存：dp[j] = Math.max(dp[j], dp[j-w[i]]+v[i]);
 	}
