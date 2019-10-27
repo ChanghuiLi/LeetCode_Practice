@@ -8,6 +8,7 @@ import java.util.Set;
 public class 无重复最长子串 {
 	//给定一个字符串，请你找出其中不含有重复字符的 最长子串 的长度。
 	//"abcabcbb"_输出: 3
+	//设置一个开始和实时搜索位置：S，J，如果不包含的话，加入进去；包含的话
 	
 	public static int lenstring(String str) {
 		if(str==null||str.length()==0) return 0;
@@ -25,6 +26,7 @@ public class 无重复最长子串 {
 		}
 		return ans;
 	}
+	
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
