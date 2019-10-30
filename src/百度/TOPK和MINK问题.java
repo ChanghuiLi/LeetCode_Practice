@@ -30,9 +30,9 @@ public class TOPK和MINK问题 {
 			 
 		 });
 		 for(int i =0;i<len;i++) {
-			 q.offer(input[i]);
+			 q.add(input[i]);
 		 }
-		 for(int j = 0;j<q.size();j++) {
+		 for(int j = 0;j<k;j++) {
 			 res.add(q.remove());
 		 }
 		 return res;
