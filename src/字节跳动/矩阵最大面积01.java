@@ -7,19 +7,27 @@ public class 矩阵最大面积01 {
 	
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
+		Character a = '1';
+		System.out.println(Integer.valueOf(a)+1);
 		
 	}
 	//构造直方图
 	public static int Solution(int[][] nums){
 		int[][] res = new int[nums.length][nums[0].length];
 		for(int j = 0;j<nums[0].length;j++) {
-			res[0][j] = nums[0][j];
+			if (nums[0][j] == '1') {
+                res[0][j] = 1;
+            } else {
+                res[0][j] = 0;
+            }
 		}
 		for(int i = 1;i<nums.length;i++) {
 			for(int j = 0;j<nums[0].length;j++) {
-				if(nums[i][j]==1) {
-					res[i][j] = nums[i-1][j]+1;
-				}
+				if (nums[i][j] == '1') {
+	                res[i][j]  = res[i-1][j]+1;
+	            } else {
+	                res[i][j] = 0;
+	            }
 			}
 		}
 		int temp = 0;
