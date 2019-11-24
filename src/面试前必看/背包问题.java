@@ -18,7 +18,7 @@ public class 背包问题 {
 	}
 	
 	
-	//完全背包问题；
+	//完全背包问题；算法2
 	public static int ComBag(int[] w,int[] v,int bag) {
 		int[] dp = new int[bag+1];
 		for(int i = 1;i<w.length+1;i++) {
