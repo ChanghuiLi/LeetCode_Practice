@@ -47,6 +47,25 @@ public class 二叉树遍历非递归 {
 		return res;
 	}
 	
+	public List<Integer> post(TreeNode root){
+		LinkedList<Integer> res = new LinkedList<>();
+		Stack<TreeNode> s = new Stack<>();
+		s.push(root);
+		TreeNode temp;
+		while(!s.isEmpty()){
+			temp = s.pop();
+			res.addFirst(temp.val);
+			if(temp.left!=null) {
+				s.push(temp.left);
+			}
+			if(temp.right!=null) {
+				s.push(temp.right);
+			}
+		}
+		return res;
+		
+	}
+	
 	
 	public List<Integer> midorder(TreeNode root){
 		LinkedList<Integer> res = new LinkedList<Integer>();
