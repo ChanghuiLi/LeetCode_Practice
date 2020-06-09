@@ -103,7 +103,7 @@ public class  背包问题集合{
 		return 0;
     }
 	
-	//一和零
+	//一和零--test
 	public int findMaxForm(String[] strs, int m, int n) {
 		
 	}
