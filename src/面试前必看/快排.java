@@ -4,6 +4,11 @@ public class 快排 {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
+		int[] a = {9,9,1,2,2,8,9,4,5,3,5,6};
+		quickSort(a,0,a.length-1);
+		for(int i = 0;i<a.length;i++) {
+			System.out.println(a[i]);
+		}
 
 	}
 	
@@ -19,26 +24,28 @@ public class 快排 {
 	private static int Patition(int[] nums, int start, int end) {
 		// TODO Auto-generated method stub
 		int tag = nums[start];
-		int tempstart = start;
-		int tempend = end;
-		while(tempstart<tempend) {
-			while(nums[tempend]>tag&&tempstart<tempend) {
-				tempend--;
+//		int tempstart = start;
+//		int tempend = end;
+		while(start<end) {
+			while(nums[end]>=tag&&start<end) {
+				end--;
 			}
-			while(nums[tempstart]<=tag&&tempstart<tempend) {
-				tempstart++;
+			while(nums[start]<tag&&start<end) {
+				start++;
 			}
-			if(tempstart<tempend) {
-				swap(nums,tempstart,tempend);
+			if(start<end) {
+				swap(nums,start,end);
 			}
 		}
-		swap(nums,start,tempend);
-		return tempend;
+//		swap(nums,start,tempend);
+		return end;
 	}
 
 	private static void swap(int[] nums, int tempstart, int tempend) {
 		// TODO Auto-generated method stub
-		
+		int temp = nums[tempend];
+		nums[tempend] = nums[tempstart];
+		nums[tempstart] = temp;
 	}
 
 }

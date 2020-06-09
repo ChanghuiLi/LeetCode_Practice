@@ -13,9 +13,6 @@ public class 大数相加 {
 	private static String add(String str1, String str2) {
 		// TODO Auto-generated method stub
 		//特殊情况处理
-		
-		
-		
 		StringBuffer res = new StringBuffer(str1.length()+str2.length()+1);
 		str1 = new StringBuffer(str1).reverse().toString();
 		str2 = new StringBuffer(str2).reverse().toString();
@@ -24,7 +21,7 @@ public class 大数相加 {
 		int i = 0;
 		int minlen = Math.min(str1.length(), str2.length());
 		for(;i<minlen;i++) {
-			currnum = str1.charAt(i)+str2.charAt(i) - 2*'0'+carry;
+			currnum = str1.charAt(i)+str2.charAt(i) - 2*'0'+ carry;
 			carry = currnum/10;
 			currnum%=10;
 			res.append(String.valueOf(currnum));

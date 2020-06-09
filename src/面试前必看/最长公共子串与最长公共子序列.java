@@ -10,7 +10,7 @@ public class 最长公共子串与最长公共子序列 {
 		System.out.println(Solution2(s1,s2));
 
 	}
-	//最长公共子串：dp[i][j]表示以该元素结尾的最大公共子串长度。
+	//最长公共子串，连续：dp[i][j]表示以该元素结尾的最大公共子串长度。
 	//dp[i][j] = dp[i-1][j-1]+1 s[i] ==s[j]
 	//dp[i][j] = 0 s[i]!=s[j]
 	public static String Solution(String s1,String s2) {
@@ -42,7 +42,7 @@ public class 最长公共子串与最长公共子序列 {
 		}
 		return s1.substring(m1, x);
 	}
-	//最长公共子序列：dp[i][j]表示1到以元素结尾的最大公共子序列长度。
+	//最长公共子序列，非连续：dp[i][j]表示1到以元素结尾的最大公共子序列长度。
 	//dp[i][j] = dp[i-1][j-1]+1 s[i] ==s[j]
 	//dp[i][j] = max（dp[i][j-1],dp[i-1][j]） s[i]!=s[j]
 	public static String Solution2(String s1,String s2) {

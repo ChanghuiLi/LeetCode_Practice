@@ -3,6 +3,7 @@ package 面试前必看;
 import java.util.LinkedList;
 
 
+
 import java.util.List;
 import java.util.Queue;
 import java.util.Stack;
@@ -88,7 +89,7 @@ public class 二叉树遍历非递归 {
 	public int levelorder(TreeNode root){
 		Queue<TreeNode> q = new LinkedList<TreeNode>();
 //		LinkedList<Integer> res = new LinkedList<Integer>();
-		if(root==null) return res;
+		if(root==null) return 0;
 		q.add(root);
 		TreeNode temp;
 		int size = 1;
